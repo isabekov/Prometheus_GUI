@@ -1,0 +1,26 @@
+Prometheus is a QT-based GUI for fireprog.exe
+
+To compile for Linux, run:
+     make Prometheus_Linux
+
+To cross-compile for Windows on Linux using MXE (a cross-compilation environment based on MinGW), run:
+     make Prometheus_MinGW32.exe
+     make Prometheus_MinGW64.exe
+
+Assumption is that MXE is located in "/opt/mxe/" folder. Compiled executables will be stored in "release" directory.
+
+                         List of files
+|---------------------+--------------------------------------------|
+| Name                | Comment                                    |
+|---------------------+--------------------------------------------|
+| Images/             | Images for resource file  *.qrc            |
+| main.cpp            | main.cpp just calls MainWindow.cpp         |
+| MainWindow.cpp      | All functions are here                     |
+| MainWindow.h        | Header file for MainWindow.cpp             |
+| MainWindow.ui       | XML with QT4 layout                        |
+| Makefile            | Makefile to compile *.pro files            |
+| Prometheus.manifest | Windows specific manifest, appended to EXE |
+| Prometheus.rc       | Windows specific resource file             |
+| README              | This file                                  |
+| Resources.qrc       | QT4 resource file                          |
+|---------------------+--------------------------------------------|
