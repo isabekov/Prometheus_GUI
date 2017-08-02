@@ -56,6 +56,7 @@ private slots:
 
     void on_pushButton_Reconfigure_clicked();
     void on_pushButton_DetectChain_clicked();
+    void on_pushButton_Read_DNA_clicked();
     void on_pushButton_ISC_Values_clicked();
     void on_pushButton_STAT_Register_clicked();
 	void on_pushButton_ProgramFPGA_clicked();

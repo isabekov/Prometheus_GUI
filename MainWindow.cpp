@@ -216,6 +216,25 @@ void MainWindow::on_pushButton_DetectChain_clicked()
     }
 }
 
+void MainWindow::on_pushButton_Read_DNA_clicked()
+{
+    ui->textEdit->clear();
+    if (ui->lineEdit_fireprog->text().isEmpty()) {
+        ui->textEdit->setTextColor(Qt::red);
+        ui->textEdit->append(tr("ERROR: Select the fireprog path first."));
+        setDefaultConsoleColor();
+    } else {
+        QString program = ui->lineEdit_fireprog->text();
+        QStringList arguments;
+		arguments.append("-v");
+        arguments.append("-u");
+		ui->textEdit->setTextColor( QColor( "blue" ) );
+		ui->textEdit->setPlainText(program+" "+arguments.join(" "));
+		ui->textEdit->setTextColor( QColor( "white" ) );
+        proc->start(program, arguments);
+    }
+}
+
 void MainWindow::on_pushButton_ISC_Values_clicked()
 {
     ui->textEdit->clear();
