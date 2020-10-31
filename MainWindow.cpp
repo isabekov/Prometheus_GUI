@@ -42,6 +42,10 @@ MainWindow::MainWindow(QWidget *parent) :
         ui->lineEdit_fireprog->setText("fireprog.exe"); //fireprog_file.setFile("fireprog");
     #elif defined(__MINGW64__)
         ui->lineEdit_fireprog->setText("fireprog.exe");//fireprog_file.setFile("fireprog.exe");
+    #elif defined(__APPLE__)
+        ui->lineEdit_fireprog->setText("/Applications/Prometheus.app/Contents/MacOS/fireprog");
+        ui->lineEdit_bscan->setText("/Applications/Prometheus.app/Contents/Resources/BitFiles/bscan_spi.bit");
+        ui->lineEdit_bitfile->setText("/Applications/Prometheus.app/Contents/Resources/BitFiles/Clock.bit");
     #else
         ui->lineEdit_fireprog->setText("fireprog"); //fireprog_file.setFile("fireprog.exe");
     #endif

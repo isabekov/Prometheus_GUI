@@ -13,7 +13,20 @@ To cross-compile for Windows on Linux using MXE (a cross-compilation environment
      make Prometheus_MinGW32.exe
      make Prometheus_MinGW64.exe
 
-Assumption is that MXE is located in "/opt/mxe/" folder. Compiled executables will be stored in the "release" directory.
+Assumption is that MXE is located in "/opt/mxe/" folder. Compiled executables will be stored in directory "release".
+
+## Cross-compilation on Linux for MacOS
+Install cross-compiler toolchain and the Qt library:
+
+     yaourt -S apple-darwin-osxcross apple-darwin-qt5-base
+
+Move *fireprog* progam to *Resources* directory, so that it can be included into the application as well.
+
+Compile the project:
+
+     make Prometheus_MacOS
+
+Compiled executables will be stored in directory "Prometheus_MacOS.app".
 
 ## List of files
 	|---------------------+--------------------------------------------|
