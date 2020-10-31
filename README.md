@@ -47,11 +47,11 @@ Compiled executables will be stored in directory "Prometheus_MacOS.app".
 ## Usage
 Configuring FPGA with a bit-stream:
 
-![FPGA](PrometheusWriteToFPGA.png "Configuring FPGA with a bit-stream")
+![FPGA](Screenshots/PrometheusWriteToFPGA.png "Configuring FPGA with a bit-stream")
 
 Configuring SPI flash with a bit-stream:
 
-![FLASH](PrometheusWriteToFlash.png "Configuring SPI flash with a bit-stream")
+![FLASH](Screenshots/PrometheusWriteToFlash.png "Configuring SPI flash with a bit-stream")
 
 Copyleft (C) 2017 Altynbek Isabekov, Onurhan Öztürk
 
